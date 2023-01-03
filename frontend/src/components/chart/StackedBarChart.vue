@@ -1,0 +1,29 @@
+<template>
+  <div>
+    Stacked Bar Chart
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'VueVuetifyDashboardStackedBarChart',
+
+  data() {
+    return {
+
+    };
+  },
+
+  mounted() {
+
+  },
+
+  methods: {
+
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+
+</style>
