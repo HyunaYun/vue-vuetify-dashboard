@@ -4,13 +4,15 @@
       <v-col
         :hidden="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs'"
         cols="2"
-        class="grey lighten-3 py-5 px-6"
+        class="py-5 px-6"
       >
         <SideMenu />
       </v-col>
 
-      <v-col class="red lighten-3">
-        <v-row class="pa-3">
+      <v-col style="background-color: #F2F2F2">
+        <v-row
+          class="pa-3"
+        >
           <v-col
             cols="12"
             md="6"
@@ -25,7 +27,9 @@
             md="6"
             lg="4"
           >
-            <v-card class="pa-3">
+            <v-card
+              class="pa-3"
+            >
               <DoughnutChart />
             </v-card>
           </v-col>

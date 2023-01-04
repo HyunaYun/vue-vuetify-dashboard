@@ -1,12 +1,17 @@
 <template>
   <v-contaniner>
     side menu
+    <v-divider />
+    side menu
+    <v-divider />
+    side menu
+    <v-divider />
   </v-contaniner>
 </template>
 
 <script>
 export default {
-  name: 'VueVuetifyDashboardSideMenu',
+  name: 'SideMenu',
 
   data() {
     return {

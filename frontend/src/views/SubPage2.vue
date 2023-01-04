@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'VueVuetifyDashboardSubPage2',
+  name: 'SubPage2',
 
   data() {
     return {

@@ -2,16 +2,21 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="#FFF"
       dark
+      style="z-index: 5000;"
     >
-      <v-app-bar-nav-icon @click="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        color="#393939"
+        @click="drawer = !drawer"
+      />
     </v-app-bar>
 
     <v-navigation-drawer
       v-model="drawer"
       absolute
       temporary
+      style="z-index: 5000"
     >
       <v-list-item>
         <v-list-item-avatar>

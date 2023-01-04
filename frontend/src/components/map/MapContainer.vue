@@ -1,8 +1,13 @@
 <template>
   <v-container>
-    Map Container
+    <div class="text-h6">
+      실시간 LOS 현황
+    </div>
+    <div class="text-body-2 mb-3">
+      지체대상 교차로 130개
+    </div>
     <l-map
-      style="height: 350px"
+      style="height: 360px"
       :zoom="zoom"
       :center="center"
     >
@@ -18,7 +23,7 @@
 import { LMap, LTileLayer } from 'vue2-leaflet'
 
 export default {
-  name: 'VueVuetifyDashboardMapContainer',
+  name: 'MapContainer',
 
   components: {
     LMap,
