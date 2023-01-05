@@ -1,20 +1,19 @@
 <template>
-  <v-containers>
-    <div class="text-h6">
+  <v-container>
+    <div class="text-h6 font-weight-bold">
       지체시간 비교데이터
     </div>
     <div class="text-body-2 mb-3">
       오늘 vs 1주 전 비교데이터
     </div>
 
-    <v-contents>
+    <v-container fluid>
       <canvas
         ref="stacked"
-        width="460"
-        height="383"
+        style="height: 40vh"
       />
-    </v-contents>
-  </v-containers>
+    </v-container>
+  </v-container>
 </template>
 
 <script>
@@ -124,7 +123,8 @@ export default {
           datasets: this.datasets
         },
         options: {
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: false,
           indexAxis: 'y',
           plugins: {
             legend: {

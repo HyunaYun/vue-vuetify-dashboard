@@ -1,18 +1,17 @@
 <template>
   <v-container>
-    <div class="text-h6">
+    <div class="text-h6 font-weight-bold">
       LOS 상위 TOP 10
     </div>
     <div class="text-body-2 mb-3">
       오늘 vs 1주 전 비교데이터
     </div>
-    <v-contents>
+    <v-container fluid>
       <canvas
         ref="compare"
-        height="360"
-        width="450"
+        style="height: 40vh"
       />
-    </v-contents>
+    </v-container>
   </v-container>
 </template>
 
@@ -65,7 +64,8 @@ export default {
         },
         options: {
           indexAxis: 'y',
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: false,
         }
       })
     }

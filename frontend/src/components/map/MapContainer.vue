@@ -1,13 +1,13 @@
 <template>
   <v-container>
-    <div class="text-h6">
+    <div class="text-h6 font-weight-bold">
       실시간 LOS 현황
     </div>
     <div class="text-body-2 mb-3">
       지체대상 교차로 130개
     </div>
     <l-map
-      style="height: 360px"
+      style="height: 42vh"
       :zoom="zoom"
       :center="center"
     >

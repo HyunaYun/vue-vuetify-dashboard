@@ -1,78 +1,105 @@
 <template>
-  <v-container class="flex">
-    <v-row>
-      <v-col
-        :hidden="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs'"
-        cols="2"
-        class="py-5 px-6"
-      >
-        <SideMenu />
-      </v-col>
+  <v-row>
+    <!-- side -->
+    <v-col
+      :hidden="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs' || $vuetify.breakpoint.name == 'md'"
+      cols="2"
+      class="py-5 px-6"
+    >
+      <side-menu />
+    </v-col>
 
-      <v-col style="background-color: #F2F2F2">
-        <v-row
-          class="pa-3"
+    <!-- dashboard contents -->
+    <v-col style="background-color: #F2F2F2">
+      <v-row
+        class="pa-3"
+      >
+        <!-- map card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
         >
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card class="pa-3">
-              <MapContainer />
-            </v-card>
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+            <map-container />
+          </v-card>
+        </v-col>
+
+        <!-- doughnut chart card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card
-              class="pa-3"
-            >
-              <DoughnutChart />
-            </v-card>
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+            <doughnut-chart />
+          </v-card>
+        </v-col>
+
+        <!-- pie chart card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card class="pa-3">
-              <PieChart />
-            </v-card>
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+            <pie-chart />
+          </v-card>
+        </v-col>
+
+        <!-- compare bar chart card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card class="pa-3">
-              <CompareBarChart />
-            </v-card>
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+            <compare-bar-chart />
+          </v-card>
+        </v-col>
+
+        <!-- line chart card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card class="pa-3">
-              <LineChart />
-            </v-card>
-          </v-col>
-          <v-col
-            cols="12"
-            md="6"
-            lg="4"
+            <line-chart />
+          </v-card>
+        </v-col>
+
+        <!-- stacked bar chart card -->
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+        >
+          <v-card
+            class="pa-3"
+            style="height: 500px"
           >
-            <v-card class="pa-3">
-              <StackedBarChart />
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+            <stacked-bar-chart />
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -87,7 +114,7 @@ import StackedBarChart from '../components/chart/StackedBarChart.vue'
 import MapContainer from '../components/map/MapContainer.vue'
 
 export default {
-  name: 'VueVuetifyDashboardDashboard',
+  name: 'MainDashboard',
 
   components: {
     SideMenu,

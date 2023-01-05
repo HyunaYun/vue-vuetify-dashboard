@@ -1,6 +1,13 @@
 <template>
-  <div>
-    Sub 2
+  <div style="text-align: center">
+    <div
+      class="font-weight-black text-h1"
+      style="color: #4BA895"
+    >
+      sub page 2
+    </div>
+
+    <v-divider />
   </div>
 </template>
 

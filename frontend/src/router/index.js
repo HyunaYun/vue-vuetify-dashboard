@@ -2,12 +2,19 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Dashboard from "@/views/Dashboard.vue";
-import SubPage1 from '@/views/SubPage1.vue'
-import SubPage2 from '@/views/SubPage2.vue'
+import SubPage1 from "@/views/SubPage1.vue";
+import SubPage2 from "@/views/SubPage2.vue";
+
+import Login from "@/views/Login.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
   {
     path: "/",
     name: "Dashboard",

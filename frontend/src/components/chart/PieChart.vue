@@ -1,18 +1,17 @@
 <template>
   <v-container>
-    <div class="text-h6">
+    <div class="text-h6 font-weight-bold">
       LOS 비율 (%)
     </div>
     <div class="text-body-2 mb-3">
       오늘 vs 1주 전 비교데이터
     </div>
-    <v-contents>
+    <v-container fluid>
       <canvas
         ref="pie"
-        width="360"
-        style="margin-left: 40px"
+        style="height: 40vh"
       />
-    </v-contents>
+    </v-container>
   </v-container>
 </template>
 
@@ -55,7 +54,8 @@ export default {
           datasets: this.datasets
         },
         options: {
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               position: 'bottom'
