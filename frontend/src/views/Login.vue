@@ -4,11 +4,12 @@
     class="mt-10"
   >
     <div>
-      <v-img
-        src="../assets/22_이지트래픽_logo_가로_화이트bg.png"
-        style="width: 10vw; margin: auto"
-        class="mb-10"
-      />
+      <div
+        class="text-h3 mb-7 font-weight-bold"
+        style="color: #F28376"
+      >
+        LOGIN
+      </div>
       <v-card
         style="width: 20vw; margin: auto"
         flat
@@ -28,10 +29,11 @@
           name="input-10-1"
           class="mb-5"
           @click:append="show1 = !show1"
+          @keypress.enter="loginEasy()"
         />
 
         <v-btn
-          style="width: 20vw"
+          style="width: 20vw; background-color: #F28376; color: white"
           @click="loginEasy()"
         >
           LOGIN
@@ -80,7 +82,7 @@ export default {
         if (this.userId == this.id && this.userPw == this.password) {
           alert("로그인 성공!");
           this.$store.commit("SET_IS_USER_LOGIN", true);
-          this.$router.replace('/')
+          this.$router.replace('/main')
         } else {
           alert("아이디와 비밀번호를 확인해주세요.");
           return;

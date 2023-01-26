@@ -1,15 +1,15 @@
 <template>
   <v-container>
     <div class="text-h6 font-weight-bold">
-      LOS 비율 (%)
+      Pie Chart
     </div>
     <div class="text-body-2 mb-3">
-      오늘 vs 1주 전 비교데이터
+      chart.js 라이브러리를 사용했습니다.
     </div>
     <v-container fluid>
       <canvas
         ref="pie"
-        style="height: 40vh"
+        style="height: 33vh"
       />
     </v-container>
   </v-container>
@@ -26,7 +26,7 @@ export default {
     return {
       pieChart: null,
 
-      labels: ['A', 'B', 'C', 'D', 'E', 'F', 'FF', 'FFF'],
+      labels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
       datasets: [
         {
           data: [30,10,5,5,10,10,20,5],

@@ -1,15 +1,15 @@
 <template>
   <v-container>
     <div class="text-h6 font-weight-bold">
-      지체시간 비교데이터
+      Doughnut Chart
     </div>
     <div class="text-body-2 mb-3">
-      오늘 vs 1주 전 비교데이터
+      chart.js 라이브러리를 사용했습니다.
     </div>
     <v-container fluid>
       <canvas
         ref="doughnut"
-        style="height: 40vh"
+        style="height: 33vh"
       />
     </v-container>
   </v-container>
@@ -73,7 +73,7 @@ export default {
           {
             data: this.data,
             backgroundColor: this.timeDataColor(),
-            borderColor: '#FFF',
+            borderColor: '#DADADA',
             borderWidth: 1
           }]
         },

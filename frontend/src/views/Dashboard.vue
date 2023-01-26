@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row style="height: 95vh">
     <!-- side -->
     <v-col
       :hidden="$vuetify.breakpoint.name == 'sm' || $vuetify.breakpoint.name == 'xs' || $vuetify.breakpoint.name == 'md'"
@@ -9,95 +9,95 @@
       <side-menu />
     </v-col>
 
-    <!-- dashboard contents -->
-    <v-col style="background-color: #F2F2F2">
-      <v-row
-        class="pa-3"
+
+    <!-- map card -->
+    <v-col
+      cols="12"
+      lg="4"
+      style="background-color: #F2F2F2; padding-right: 10px"
+      class="pt-6"
+    >
+      <v-card
+        style="height: 840px; width: 100%"
       >
-        <!-- map card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
-          >
-            <map-container />
-          </v-card>
-        </v-col>
+        <map-container />
+      </v-card>
+    </v-col>
 
-        <!-- doughnut chart card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
+    <!-- dashboard contents -->
+    <v-col
+      style="background-color: #F2F2F2; padding-left: 10px"
+      class="pr-4 pt-6"
+    >
+      <v-col>
+        <v-row style="padding-bottom: 10px">
+          <!-- line chart card -->
+          <v-col
+            cols="12"
+            md="6"
+            style="padding: 0 10px 0 0 "
           >
-            <doughnut-chart />
-          </v-card>
-        </v-col>
+            <v-card
+              style="height: 410px;"
+            >
+              <line-chart />
+            </v-card>
+          </v-col>
 
-        <!-- pie chart card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
+          <!-- stacked bar chart card -->
+          <v-col
+            cols="12"
+            md="6"
+            style="padding: 0 0 0 10px"
           >
-            <pie-chart />
-          </v-card>
-        </v-col>
+            <v-card
+              style="height: 410px"
+            >
+              <compare-bar-chart />
+            </v-card>
+          </v-col>
+        </v-row>
 
-        <!-- compare bar chart card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
+        <v-row style="padding-top: 10px">
+          <!-- doughnut chart card -->
+          <v-col
+            cols="12"
+            lg="4"
+            style="padding: 0 10px 0 0"
           >
-            <compare-bar-chart />
-          </v-card>
-        </v-col>
+            <v-card
+              style="height: 410px"
+            >
+              <doughnut-chart />
+            </v-card>
+          </v-col>
+          <!-- pie chart card -->
+          <v-col
+            cols="12"
+            lg="4"
+            style="padding: 0 10px 0 10px"
+          >
+            <v-card
+              style="height: 410px"
+            >
+              <stacked-bar-chart />
+            </v-card>
+          </v-col>
 
-        <!-- line chart card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
+          <!-- compare bar chart card -->
+          <v-col
+            cols="12"
+            lg="4"
+            style="padding: 0 0 0 10px"
           >
-            <line-chart />
-          </v-card>
-        </v-col>
-
-        <!-- stacked bar chart card -->
-        <v-col
-          cols="12"
-          md="6"
-          lg="4"
-        >
-          <v-card
-            class="pa-3"
-            style="height: 500px"
-          >
-            <stacked-bar-chart />
-          </v-card>
-        </v-col>
-      </v-row>
+            <v-card
+              style="height: 410px"
+            >
+              <pie-chart />
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-col>
   </v-row>
 </template>

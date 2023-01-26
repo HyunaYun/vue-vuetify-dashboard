@@ -11,14 +11,15 @@
         color="#393939"
         @click="drawer = !drawer"
       />
-      <!--
+
       <v-toolbar-title
-        style="color: #4BA895"
+        style="color: #F28376; cursor: pointer;"
         class="font-weight-bold"
+        @click="$router.push('/main')"
       >
-        지체산정 프로그램
+        DASH BOARD
       </v-toolbar-title>
-      -->
+
 
       <v-spacer />
       <div
@@ -28,18 +29,19 @@
         <div
           class="text-subtitle-2 font-weight-bold"
         >
-          서울시 이지트래픽 님
+          ADMIN 님
         </div>
         <div
           class="text-body-2"
         >
-          easy.traffic@
+          admin@
         </div>
       </div>
       <v-btn
         icon
         style="background-color: #F28376; width: 48px; height: 48px"
         class="mr-5"
+        @click="$router.push('/profile')"
       >
         <v-icon>
           mdi-account
@@ -70,10 +72,12 @@
       style="z-index: 5000"
     >
       <v-list-item>
-        <v-img
-          src="./assets/22_이지트래픽_logo_가로_화이트bg.png"
-          class="ma-9"
-        />
+        <div
+          class="text-h4 py-5 font-weight-bold"
+          style="margin: auto; color: #198972"
+        >
+          DASH BOARD
+        </div>
       </v-list-item>
 
       <v-divider />
@@ -83,7 +87,7 @@
           v-for="item in items"
           :key="item.title"
           link
-          active-class=""
+          active-class="teal lighten-5"
           :to="item.to"
         >
           <v-list-item-icon>
@@ -111,7 +115,7 @@ export default {
   data: () => ({
     drawer: false,
     items: [
-      { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
+      { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/main' },
       { title: 'SubPage1', icon: 'mdi-view-dashboard', to: '/sub1' },
       { title: 'SubPage2', icon: 'mdi-view-dashboard', to: '/sub2' },
     ],

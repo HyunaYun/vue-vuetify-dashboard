@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <div class="text-h6 font-weight-bold">
-      지체시간 비교데이터
+      Stacked Bar Chart
     </div>
     <div class="text-body-2 mb-3">
-      오늘 vs 1주 전 비교데이터
+      chart.js 라이브러리를 사용했습니다.
     </div>
 
     <v-container fluid>
       <canvas
         ref="stacked"
-        style="height: 40vh"
+        style="height: 33vh"
       />
     </v-container>
   </v-container>
@@ -31,74 +31,62 @@ export default {
       datasets: [
         {
           label: '11:00',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [10,5,0,0, 10,10,5,0,0, 10, 20, 0],
           backgroundColor: '#198972',
           barThickness: 14,
         },
         {
           label: '11:15',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [30,0,0,50, 10, 30,0,0,50, 10, 20, 10 ],
           backgroundColor: '#4BA895',
           barThickness: 14,
         },
         {
           label: '11:30',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [20,10,0,0, 10, 20,10,0,0, 10, 0, 30],
           backgroundColor: '#C8DD9F',
           barThickness: 14,
         },
         {
           label: '11:45',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,15,0,10, 0, 0,15,0,10, 0, 0, 10],
           backgroundColor: '#F5D48F',
           barThickness: 14,
         },
         {
           label: '12:00',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,30,50,0, 0, 0,30,50,0, 0, 10, 0],
           backgroundColor: '#F1B98C',
           barThickness: 14,
         },
         {
           label: '12:15',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,30,10,0, 20, 0,30,10,0, 20, 0, 0],
           backgroundColor: '#F5AEA7',
           barThickness: 14,
         },
         {
           label: '12:30',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,0,20,15, 20, 0,0,20,15, 20, 5, 30],
           backgroundColor: '#F28376',
           barThickness: 14,
         },
         {
           label: '12:45',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [40,0,0,10, 0, 40,0,0,10, 0, 25, 10],
           backgroundColor: '#E56F61',
           barThickness: 14,
         },
         {
           label: '13:00',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,10,0,0, 20, 0,10,0,0, 20, 20, 0],
           backgroundColor: '#4BA895',
           barThickness: 14,
         },
         {
           label: '13:15',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
-          backgroundColor: '#4BA895',
-          barThickness: 14,
-        },
-        {
-          label: '13:30',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
+          data: [0,0,20,15, 10, 0,0,20,15, 10, 0, 10],
           backgroundColor: '#C8DD9F',
-          barThickness: 14,
-        },
-        {
-          label: '13:45',
-          data: [10,10,10,10,10,10,10,10,10,10,10,10],
-          backgroundColor: '#F5D48F',
           barThickness: 14,
         },
       ]

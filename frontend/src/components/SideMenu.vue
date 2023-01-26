@@ -29,12 +29,12 @@
     <v-divider class="my-7" />
 
     <v-container class="pa-3">
-      <div class="text-h6 font-weight-bold">
+      <div class="text-h6 font-weight-bold mb-3">
         DAY
       </div>
-      <div class="text-subtitle-2 font-weight-medium mb-5">
+      <!-- <div class="text-subtitle-2 font-weight-medium mb-5">
         오늘 평균 지체 시간
-      </div>
+      </div> -->
 
       <v-row>
         <v-col
@@ -48,7 +48,7 @@
           align-self="end"
           class="text-subtitle-1 pa-1"
         >
-          s/h
+          개
         </v-col>
 
         <v-spacer />
@@ -70,26 +70,26 @@
     <v-divider class="my-7" />
 
     <v-container class="pa-3">
-      <div class="text-h6 font-weight-bold">
+      <div class="text-h6 font-weight-bold mb-3">
         A WEEK AGO
       </div>
-      <div class="text-subtitle-2 font-weight-medium mb-5">
+      <!-- <div class="text-subtitle-2 font-weight-medium mb-5">
         1주 전 평균 지체 시간
-      </div>
+      </div> -->
 
       <v-row>
         <v-col
           class="text-h4 font-weight-bold pa-0 pl-3"
           cols="auto"
         >
-          320
+          160
         </v-col>
         <v-col
           cols="auto"
           align-self="end"
           class="text-subtitle-1 pa-1"
         >
-          s/h
+          개
         </v-col>
 
         <v-spacer />
@@ -108,7 +108,7 @@
             >
               mdi-chevron-up
             </v-icon>
-            57.89%
+            50.00%
           </div>
         </v-col>
       </v-row>
@@ -117,26 +117,26 @@
     <v-divider class="my-7" />
 
     <v-container class="pa-3">
-      <div class="text-h6 font-weight-bold">
+      <div class="text-h6 font-weight-bold mb-3">
         2 WEEKS AGO
       </div>
-      <div class="text-subtitle-2 font-weight-medium mb-5">
+      <!-- <div class="text-subtitle-2 font-weight-medium mb-5">
         2주 전 평균 지체 시간
-      </div>
+      </div> -->
 
       <v-row>
         <v-col
           class="text-h4 font-weight-bold pa-0 pl-3"
           cols="auto"
         >
-          320
+          480
         </v-col>
         <v-col
           cols="auto"
           align-self="end"
           class="text-subtitle-1 pa-1"
         >
-          s/h
+          개
         </v-col>
 
         <v-spacer />
@@ -152,7 +152,7 @@
             <v-icon style="color: #4BA895;">
               mdi-chevron-down
             </v-icon>
-            57.89%
+            50.00%
           </div>
         </v-col>
       </v-row>
