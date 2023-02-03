@@ -11,12 +11,26 @@
         mdi-clock-outline
       </v-icon>
       <div
+        v-if="date"
+        class="text-h6"
+        style="color: #9D9D9D"
+      >
+        {{ date }}
+      </div>
+      <div
+        v-else
+        class="text-h6"
+        style="color: #9D9D9D"
+      >
+        0000-00-00
+      </div>
+
+      <div
         v-if="liveTime"
         class="text-h3 font-weight-bold"
       >
         {{ liveTime }}
       </div>
-
       <div
         v-else
         class="text-h3 font-weight-bold"
@@ -163,11 +177,14 @@
 </template>
 
 <script>
+import dayjs from 'dayjs'
+
 export default {
   name: 'SideMenu',
 
   data() {
     return {
+      date: null,
       liveTime: null,
       timeInterval: null,
     };
@@ -191,6 +208,7 @@ export default {
       let minutes = time.getMinutes();
       let seconds = time.getSeconds();
 
+      this.date = dayjs().format('YYYY-MM-DD')
       this.liveTime = `${hour < 10 ? `0${hour}` : hour}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`
     }
   },
